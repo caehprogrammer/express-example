@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+
 const Cabin = require('cabin');
 const Email = require('email-templates');
 const bodyParser = require('body-parser');
@@ -13,6 +14,11 @@ const requestReceived = require('request-received');
 const responseTime = require('response-time');
 const { Signale } = require('signale');
 const { isEmail } = require('validator');
+
+// Listen on a specific host via the HOST environment variable
+const host = process.env.HOST || '0.0.0.0';
+// Listen on a specific port via the PORT environment variable
+const port = process.env.PORT || 8080;
 
 // create persistent email queue file if it doesn't already exist
 // note you could swap out this for MongoDB (e.g. Mongoose), SQL, Redis, etc
@@ -132,6 +138,6 @@ app.post('/book-ticket', async (req, res, next) => {
   }
 });
 
-app.listen(8080, () => {
+app.listen(port,host () => {
   cabin.info('App started: http://localhost:8080');
 });
