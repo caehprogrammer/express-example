@@ -139,5 +139,5 @@ app.post('/book-ticket', async (req, res, next) => {
 });
 
 app.listen(port,host () => {
-  cabin.info('App started: http://localhost:8080');
+  cabin.info('Running CORS Anywhere on ' + host + ':' + port);
 });
