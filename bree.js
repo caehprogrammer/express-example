@@ -11,7 +11,7 @@ const cabin = new Cabin({
 });
 
 const bree = new Bree({
-  logger: cabin,
+  logger: new Cabin(),
   jobs: [
     {
       name: 'email',
