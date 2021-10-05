@@ -55,6 +55,7 @@
     "url": "https://github.com/breejs/express-example"
   },
   "scripts": {
+    "run":"node app.js",
     "lint": "yarn run lint:js && yarn run lint:md",
     "lint:js": "xo",
     "lint:md": "remark . -qfo",
