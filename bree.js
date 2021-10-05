@@ -1,9 +1,18 @@
 const Bree = require('bree');
 const Cabin = require('cabin');
-const Graceful = require('@ladjs/graceful
+const Graceful = require('@ladjs/graceful');
+const { Signale } = require('signale');
+
+// initialize cabin
+const cabin = new Cabin({
+  capture: false,
+  axe: {
+    logger: new Signale()
+  }
+});      
 
 const bree = new Bree({
-  logger: new Cabin(),
+  logger: cabin,
   jobs: [
     {
       name: 'email',
