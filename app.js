@@ -32,11 +32,11 @@ const email = new Email({
 
 // initialize cabin
 const cabin = new Cabin({
+  capture: false,
   axe: {
     logger: new Signale()
   }
-});
-
+}); 
 // initialize express
 const app = express();
 
