@@ -1,14 +1,6 @@
 const Bree = require('bree');
 const Cabin = require('cabin');
-const Graceful = require('@ladjs/graceful');
-const { Signale } = require('signale');
-
-// initialize cabin
-const cabin = new Cabin({
-  axe: {
-    logger: new Signale()
-  }
-});
+const Graceful = require('@ladjs/graceful
 
 const bree = new Bree({
   logger: new Cabin(),
